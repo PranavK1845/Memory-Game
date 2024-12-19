@@ -5,14 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Memory Game!</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
     <script src="index.js"></script>
 </head>
 <body>
-    <h1> Memory Game!</h1>
-    <div class="playingcards-container"></div>
-    <p>Score: <span class="score"></span></p>
-    <div class="actions">
-        <button onclick="playagain()">Play Again</button>
+
+    <div class="loading-screen">
+        <img src="images/7reK.gif" alt="gif" class="loading-gif">
+      </div>
+
+    <h1 id="title">Memory Game !</h1>
+<div class="main"></div>
+    <div class="game-info">
+        <button id="start-button">Start Game</button>
+        <button id="restart-button">Restart Game</button>
+        <p>Time: <span id="timer">00:00</span></p>
+        <p>Score: <span id="score">0</span></p>
     </div>
+
+    <div class="card-container" id="card-container"></div>
+    
+</div>
+
 </body>
 </html>
