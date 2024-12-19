@@ -70,11 +70,12 @@ h1 {
 }
 
 .win-message{
-    font-size: 4rem;
+    position: absolute;         
+    top: 20px;
     color: white;
+    font-size: 4rem;
     font-family: "Pixelify Sans", sans-serif;
     text-align: center;
-    margin-top: 40px;
     animation: fadeIn 1s ease-in-out;
 }
 
