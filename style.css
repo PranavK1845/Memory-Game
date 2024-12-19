@@ -1,0 +1,175 @@
+.loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #1c1b2b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+  }
+  
+.loading-gif {
+    width: 500px;
+    height: 500px;
+    animation: fadeInOut 3.5s ease-in-out;
+  }
+  
+@keyframes fadeInOut {
+    0% {
+      opacity: 0;
+    }
+    25% {
+      opacity: 1;
+    }
+    50% {
+        opacity: 1;
+    }
+    70% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  
+.main {
+    display: none;
+  }
+
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #1c1b2b;
+    margin: 0;
+    padding: 0;
+    display: flex;              
+    justify-content: center;    
+    align-items: center;        
+    height: 100vh;              
+}
+
+h1 {
+    position: absolute;         
+    top: 20px;
+    color: white;
+    font-size: 4rem;
+    font-family: "Pixelify Sans", sans-serif;
+    text-align: center;
+}
+
+@keyframes blink {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+}
+
+.win-message{
+    font-size: 4rem;
+    color: white;
+    font-family: "Pixelify Sans", sans-serif;
+    text-align: center;
+    margin-top: 40px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.game-info { 
+    position: absolute;
+    bottom:100px;
+    display: flex;
+    justify-content: space-evenly; 
+    width: 100%; 
+    max-width: 900px; 
+    padding: 0 20px; 
+    z-index: 10;
+    margin-bottom: 10;
+}
+
+button {
+    font-family: "Pixelify Sans", sans-serif;
+    font-size: 1.5rem;
+    margin: 10px;
+    padding: 10px 20px;
+    cursor: pointer;
+    border: none;
+    background-color: #19191f;
+    color: white;
+    border-radius: 5px;
+   
+}
+
+button:hover {
+    background-color: white;
+    color: black;
+}
+
+.card-container {
+    background-color: #19191f;
+    border-radius: 50px;
+    display: grid;
+    grid-template-columns: repeat(6, 120px); /* Creates a grid with 6 columns */
+    grid-template-rows: repeat(4,130px);
+    gap: 20px;                 
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    padding: 35px;
+    width: fit-content; 
+}
+
+.card {
+    width: 110px;
+    height: 130px;
+    cursor: pointer;
+    position: relative;
+    transform: rotateY(0);
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+}
+
+.card.flipped {
+    transform: rotateY(180deg);
+}
+
+.card .front,.card .back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 8px;
+    background-size: cover;
+    background-position: center;
+}
+
+.card .back {
+    background-image: url('./images/cardbackcover.jpg'); 
+    border-radius: 20px;
+}
+
+.card .front {
+    background-color: #fff;
+    transform: rotateY(180deg);
+}
+#timer{
+    color: white;
+}
+
+p{
+    color: white;
+    font-family: "Pixelify Sans", sans-serif;
+    font-size: 1.5rem;
+}
