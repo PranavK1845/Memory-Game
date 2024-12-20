@@ -216,8 +216,6 @@ function resetTimer() {
 
 restartButton.addEventListener("click", () => {
     resetGame();  
-    resetTimer(); 
-    startTimer();
 });
 
 function resetGame() {
@@ -225,7 +223,14 @@ function resetGame() {
     secondCard = null;
     lockBoard = false;
     matchedPairs = 0;
+    const winMessage = document.querySelector(".win-message");
+    if (winMessage) {
+        winMessage.remove();
+    }
+    titleElement.style.display = "block";
+    resetScore();
     initializeGame();
     resetTimer();
+    typeWriterEffect();
     startTimer();
 }
