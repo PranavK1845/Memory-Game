@@ -107,8 +107,9 @@ function resetBoard() {
 }
 
 function updateScore() {
-    scoreElement.textContent = `score: ${score}`;
+    scoreElement.textContent = `Score: ${score}`;
 }
+
 
 function initializeGame() {
     cardContainer.innerHTML = "";  
@@ -125,6 +126,7 @@ function resetScore() {
     score = 0;
     updateScore();
 }
+
 
 function shuffleCards() {
    
